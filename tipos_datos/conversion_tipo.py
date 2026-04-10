@@ -25,3 +25,18 @@ print(saludo + str_numero_entero)
 # print(str_numero_entero + numero_dos)
 
 # Solicite al usuario que ingrese su nombre y edad y muéstrelos por pantalla con un saludo.
+
+# Un string NO vacío siempre retorna True al convertirlo a booleano, porque TIENE contenido.
+# Si el string estuviera vacío, en ese caso sería False.
+# str_booleano = 'false'
+int_booleano = 1
+
+# print(type(str_booleano))
+print(type(int_booleano))
+
+# booleano = bool(str_booleano)
+otro_booleano = bool(int_booleano)
+
+# print(booleano)
+# print(type(booleano))
+print(type(otro_booleano))
