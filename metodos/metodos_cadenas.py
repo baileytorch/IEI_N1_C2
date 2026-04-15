@@ -2,6 +2,7 @@
 
 nombre_completo_minusculas = 'erick bailey'
 nombre_completo_mayusculas = 'ERICK BAILEY'
+rut_str = '12.824.290-2'
 
 loren_ipsum = '''Lorem ipsum dolor sit amet, 
 consectetur adipiscing elit. 
@@ -36,3 +37,19 @@ print(nombre_completo_minusculas.upper())
 # El método TITLE transforma la cadena en título, la primera letra de cada palabra en mayúsculas
 print(nombre_completo_minusculas.title())
 # print(loren_ipsum.title())
+
+# El método LEN (length, largo = tamaño) permite conocer la cantidad de caracteres de un string
+print(len(nombre_completo_minusculas))
+print(len(loren_ipsum))
+
+# El método SPLIT permite cortar una cadena de caracteres en el caracter indicado
+# Si no se entrega ningún argumento al método split, se dividirá la cadena en los espacios
+nombre_split = nombre_completo_minusculas.split()
+print(nombre_split)
+
+# Si se entrega un argumento al método split, se dividirá la cadena en el caracter indicado
+nombre_split = nombre_completo_minusculas.split('i')
+print(nombre_split)
+
+rut_split = rut_str.split('-')
+print(rut_split)
