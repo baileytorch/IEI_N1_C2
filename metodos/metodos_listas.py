@@ -78,6 +78,6 @@ lista_numeros.sort()
 print(len(lista_numeros))
 print(lista_numeros)
 
-# El método REVERSE ordena la lista de númereos de manera descendente
+# El método REVERSE ordena la lista de números de manera descendente
 lista_numeros.reverse()
 print(lista_numeros)
