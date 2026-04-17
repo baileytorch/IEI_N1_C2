@@ -3,6 +3,8 @@
 nombre_completo_minusculas = 'erick bailey'
 nombre_completo_mayusculas = 'ERICK BAILEY'
 rut_str = '12.824.290-2'
+camion_codigo = 'cami&oacute;n'
+cadena_espacios = '     esta es mi cadena de texto      '
 
 loren_ipsum = '''Lorem ipsum dolor sit amet, 
 consectetur adipiscing elit. 
@@ -53,3 +55,22 @@ print(nombre_split)
 
 rut_split = rut_str.split('-')
 print(rut_split)
+
+# El método REPLACE modifica una parte de la cadena de texto especificada por otra definida
+# REPLACE recibe 2 argumentos, el primero es el texto a buscar y el segundo el texto que lo reemplazará
+nombre_modificado = nombre_completo_mayusculas.replace('RICK','gg')
+print(nombre_modificado)
+
+nombre_modificado_minusculas = nombre_completo_minusculas.replace('erick','Torch')
+print(nombre_modificado_minusculas)
+
+modificar_texto_tilde = camion_codigo.replace('&oacute;','ó')
+print(modificar_texto_tilde)
+
+# El método STRIP (TRIMM en la mayoría de los lenguajes) 
+# elimina espacios en blanco al principio y al final de una cadena de texto
+print(cadena_espacios)
+print(len(cadena_espacios))
+cadena_modificada = cadena_espacios.strip()
+print(cadena_modificada)
+print(len(cadena_modificada))
