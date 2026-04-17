@@ -6,7 +6,10 @@ datos_personales = {
     'titulo':'Analista Programador'
 }
 
+# El método LEN (length, largo = tamaño) permite conocer la cantidad de elementos de un diccionario
+print(len(datos_personales))
 
+print()
 # El método ITEMS permite obtener cada uno de los pares de elementos
 print(datos_personales.items())
 
@@ -29,4 +32,14 @@ print()
 # Para agregar un nuevo elemento a un diccionario
 # debemos definir su clave y su valor
 datos_personales['Es profesor?'] = True
+print(datos_personales)
+
+print()
+# El método POP elimina un elemento por su CLAVE
+datos_personales.pop('Es profesor?')
+print(datos_personales)
+
+print()
+# El método CLEAR elimina TODOS los elementos del diccionario
+datos_personales.clear()
 print(datos_personales)
