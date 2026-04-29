@@ -49,10 +49,34 @@ def convertir_float(valor):
     except Exception as error:
         print(f'No se puede realizar la conversión por el siguiente error: {error}')
 
-numero1 = convertir_float(input('Ingrese el primer número: '))
-numero2 = convertir_float(input('Ingrese el segundo número: '))
+def solicitar_datos():
+    numero1 = convertir_float(input('Ingrese el primer número: '))
+    numero2 = convertir_float(input('Ingrese el segundo número: '))
+    return(numero1,numero2)
 
-suma(numero1,numero2)
-resta(numero1,numero2)
-multiplicacion(numero1,numero2)
-division(numero1,numero2)
+ciclo = True
+print('Mi Primera Súper Calculadora en Python!!')
+print('========================================')
+
+while ciclo == True:
+    print()
+    print('[1] Suma')
+    print('[2] Resta')
+    print('[3] Multiplicación')
+    print('[4] División')
+    print('[0] Salir')
+
+    opcion = input('Seleccione su opción [0-4]: ')
+    if opcion == '0':
+        ciclo = False
+        print('Saliendo del sistema...')
+    elif opcion == '1':
+        suma()
+    elif opcion == '2':
+        resta()
+    elif opcion == '3':
+        multiplicacion()
+    elif opcion == '4':
+        division()
+    else:
+        print('Opción NO corresponde, ingrese nuevamente...')
