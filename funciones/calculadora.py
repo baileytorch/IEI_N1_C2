@@ -57,8 +57,9 @@ def solicitar_datos():
     return(numero1,numero2)
 
 ciclo = True
-print('Mi Primera Súper Calculadora en Python!!')
-print('========================================')
+titulo = 'Súper Calculadora!!'
+print(titulo)
+print('=' * len(titulo))
 
 while ciclo == True:
     print()
@@ -71,17 +72,23 @@ while ciclo == True:
     opcion = input('Seleccione su opción [0-4]: ')
     opciones_validas = ['0','1','2','3','4']
     if opcion in opciones_validas:
-        if opcion != '0':            
+        if opcion != '0':
+            operacion = ''          
             num1,num2 = solicitar_datos()
-            
+
             if opcion == '1':
-                suma(num1,num2)
+                operacion = '+'
+                resultado = suma(num1,num2)
             elif opcion == '2':
-                resta(num1,num2)
+                operacion = '-'
+                resultado = resta(num1,num2)
             elif opcion == '3':
-                multiplicacion(num1,num2)
+                operacion = 'x'
+                resultado = multiplicacion(num1,num2)
             elif opcion == '4':
-                division(num1,num2)
+                operacion = '/'
+                resultado = division(num1,num2)
+            print(f'\n{num1} {operacion} {num2} = {resultado}')
         else:
             ciclo = False
             print('Saliendo del sistema...')
