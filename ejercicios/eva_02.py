@@ -2,6 +2,9 @@
 # las que serán llamadas dentro de un menú de opciones.
 
 # 1.- Cree una función que entregue el saludo "Buen día!"
+def saludo_cordial():
+    saludo = "Buen día!"
+    return saludo
 
 # 2.- Cree una función que solicite el nombre y el género al usuario y luego, 
 # llamando a la función anterior, salude al usuario, el saludo debe quedar así: 
@@ -17,6 +20,7 @@
 # y calcule el factorial de ese número
 
 def menu_principal():
-    pass
+    respuesta = saludo_cordial()
+    print(respuesta)
 
 menu_principal()
