@@ -38,16 +38,18 @@ def division(a,b):
     except ZeroDivisionError:
         print('No se puede dividir por 0.')
     except Exception as error:
-        print(f'No se puede dividir por el siguiente error: {error}')
+        print(f'Tipo Error: {type(error)}')
+        print(f'Mensaje Error: {error}')
 
 def convertir_float(valor):
     try:
         num_decimal = float(valor)
         return num_decimal
     except ValueError: 
-            print('No se puede convertir el valor ingresado a decimal')
+            print(f'No se puede convertir "{valor}" a decimal')
     except Exception as error:
-        print(f'No se puede realizar la conversión por el siguiente error: {error}')
+        print(f'Tipo Error: {type(error)}')
+        print(f'Mensaje Error: {error}')
 
 def solicitar_datos():
     numero1 = convertir_float(input('Ingrese el primer número: '))
@@ -67,16 +69,21 @@ while ciclo == True:
     print('[0] Salir')
 
     opcion = input('Seleccione su opción [0-4]: ')
-    if opcion == '0':
-        ciclo = False
-        print('Saliendo del sistema...')
-    elif opcion == '1':
-        suma()
-    elif opcion == '2':
-        resta()
-    elif opcion == '3':
-        multiplicacion()
-    elif opcion == '4':
-        division()
+    opciones_validas = ['0','1','2','3','4']
+    if opcion in opciones_validas:
+        if opcion != '0':            
+            num1,num2 = solicitar_datos()
+            
+            if opcion == '1':
+                suma(num1,num2)
+            elif opcion == '2':
+                resta(num1,num2)
+            elif opcion == '3':
+                multiplicacion(num1,num2)
+            elif opcion == '4':
+                division(num1,num2)
+        else:
+            ciclo = False
+            print('Saliendo del sistema...')
     else:
         print('Opción NO corresponde, ingrese nuevamente...')
